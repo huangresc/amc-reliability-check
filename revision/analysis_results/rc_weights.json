@@ -1,0 +1,86 @@
+{
+  "seed42_minverify_M4_seed42_ep640": {
+    "outcome": "COLLAPSE",
+    "seed": 42,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  },
+  "seed1500_rc30_s1500": {
+    "outcome": "COLLAPSE",
+    "seed": 1500,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  },
+  "seed42_rcord000": {
+    "outcome": "healthy",
+    "seed": 42,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  },
+  "seed42_rcord007": {
+    "outcome": "healthy",
+    "seed": 42,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  },
+  "seed7_rc30_s7": {
+    "outcome": "healthy",
+    "seed": 7,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  },
+  "seed1001_rc30_s1001": {
+    "outcome": "healthy",
+    "seed": 1001,
+    "frozen_at_640": {
+      "conv1.W": false,
+      "conv1.b": false,
+      "conv2.W": false,
+      "conv2.b": false,
+      "fc1.W": false,
+      "fc1.b": false,
+      "fc2.W": false,
+      "fc2.b": false
+    }
+  }
+}

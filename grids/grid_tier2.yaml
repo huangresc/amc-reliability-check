@@ -1,0 +1,51 @@
+batch_tag: tier2
+total_epochs: 640
+
+runs:
+  # M2n_g: 全局标准化
+  - {variant: M2n_g, seed: 42, repeat_id: 1}
+  - {variant: M2n_g, seed: 123, repeat_id: 1}
+  - {variant: M2n_g, seed: 456, repeat_id: 1}
+  - {variant: M2n_g, seed: 789, repeat_id: 1}
+  - {variant: M2n_g, seed: 1011, repeat_id: 1}
+  - {variant: M2n_g, seed: 1213, repeat_id: 1}
+  - {variant: M2n_g, seed: 1415, repeat_id: 1}
+  - {variant: M2n_g, seed: 1617, repeat_id: 1}
+  - {variant: M2n_g, seed: 1819, repeat_id: 1}
+  - {variant: M2n_g, seed: 2021, repeat_id: 1}
+
+  # M4n_g: 全局标准化
+  - {variant: M4n_g, seed: 42, repeat_id: 1}
+  - {variant: M4n_g, seed: 123, repeat_id: 1}
+  - {variant: M4n_g, seed: 456, repeat_id: 1}
+  - {variant: M4n_g, seed: 789, repeat_id: 1}
+  - {variant: M4n_g, seed: 1011, repeat_id: 1}
+  - {variant: M4n_g, seed: 1213, repeat_id: 1}
+  - {variant: M4n_g, seed: 1415, repeat_id: 1}
+  - {variant: M4n_g, seed: 1617, repeat_id: 1}
+  - {variant: M4n_g, seed: 1819, repeat_id: 1}
+  - {variant: M4n_g, seed: 2021, repeat_id: 1}
+
+  # M2n_p: 逐样本标准化
+  - {variant: M2n_p, seed: 42, repeat_id: 1}
+  - {variant: M2n_p, seed: 123, repeat_id: 1}
+  - {variant: M2n_p, seed: 456, repeat_id: 1}
+  - {variant: M2n_p, seed: 789, repeat_id: 1}
+  - {variant: M2n_p, seed: 1011, repeat_id: 1}
+  - {variant: M2n_p, seed: 1213, repeat_id: 1}
+  - {variant: M2n_p, seed: 1415, repeat_id: 1}
+  - {variant: M2n_p, seed: 1617, repeat_id: 1}
+  - {variant: M2n_p, seed: 1819, repeat_id: 1}
+  - {variant: M2n_p, seed: 2021, repeat_id: 1}
+
+  # M4n_p: 逐样本标准化
+  - {variant: M4n_p, seed: 42, repeat_id: 1}
+  - {variant: M4n_p, seed: 123, repeat_id: 1}
+  - {variant: M4n_p, seed: 456, repeat_id: 1}
+  - {variant: M4n_p, seed: 789, repeat_id: 1}
+  - {variant: M4n_p, seed: 1011, repeat_id: 1}
+  - {variant: M4n_p, seed: 1213, repeat_id: 1}
+  - {variant: M4n_p, seed: 1415, repeat_id: 1}
+  - {variant: M4n_p, seed: 1617, repeat_id: 1}
+  - {variant: M4n_p, seed: 1819, repeat_id: 1}
+  - {variant: M4n_p, seed: 2021, repeat_id: 1}

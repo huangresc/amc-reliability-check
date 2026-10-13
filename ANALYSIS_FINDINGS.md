@@ -328,3 +328,64 @@ NOT SUPPORTED by these data:
 - that the failed run is specific to the flatten head: the LR control shows an
   identical terminal state in the GAP head, so the head sets the *route*, not the
   *possibility*, of collapse
+
+## 14. Revision-round results (official split, repair sweep, baseline)
+
+Supersedes and extends §12. Produced by the `revision/` scripts; distilled
+numbers in `revision/analysis_results/`. All values below match the manuscript.
+
+### 14.1 Partition provenance (rc_partition_fingerprint.py)
+
+The legacy `train_idx_sha1` field is `sha1(list(range(n_train)))`: it encodes
+only the training-set *size*, not which samples were chosen. Because the two
+historical partitions differ in size (176 000 vs 110 000), the legacy value does
+distinguish them in this study, but it is not a partition fingerprint.
+`partition_fingerprints.json` records the true fingerprints of both partitions
+and maps the legacy values to them. The manuscript (Section III-A) reports the
+two partitions separately rather than pooling them.
+
+### 14.2 Failure rate, de-pooled
+
+- re-split (176 000/44 000), 10 seeds: **1 failure** (seed 2021), 10.0 %,
+  Wilson 95 % [1.8 %, 40.4 %].
+- official stratified (110 000/110 000), 30 seeds: **2 failures** (one of them
+  seed 42), 6.7 %, Wilson 95 % [1.8 %, 21.3 %].
+
+The intervals overlap almost completely, so the data do not resolve a
+difference in failure rate between the partitions; the two failed runs share
+the same mechanism (the constant predictor). The partition is treated as an
+axis of the draw, not a separate population.
+
+### 14.3 Repair sweep (20 draws x 2 runs = 40 attempts)
+
+23/40 escape (57.5 %, Wilson [42.2 %, 71.5 %]); 10/20 on the re-split, 13/20 on
+the official partition (intervals overlap). Escape is all-or-nothing: escaping
+attempts land in 33.3–45.5 %, failed attempts return exactly to the constant
+predictor (8.96–9.27 %).
+
+Two earlier claims, overturned by the full 20 draws (now negative results):
+
+- the epoch-0 dead-count threshold from the first five draws (a 32-unit cutoff)
+  does not survive: Spearman rho = +0.22 (p = 0.35), Mann–Whitney AUC = 0.64
+  (p = 0.38). Withdrawn.
+- "the verdict belongs to the draw alone": 13/20 agreement, binomial p = 0.26;
+  McNemar p = 0.45. Too strong; now reported as shared but not established.
+
+### 14.4 From-scratch baseline (exp5_scratch_baseline.py)
+
+A 40-epoch run from random initialisation on the official split (seed 42)
+reaches **44.97 %**, against an escape range of 39.6–45.5 %. A successful repair
+therefore *matches* a short fresh run rather than beating it; repair is cheaper
+only against the full 640-epoch schedule.
+
+### 14.5 Weight-space comparison (rc_weights*.py)
+
+The collapsed run's fc1 weight matrix moved by a relative Frobenius displacement
+of **0.282** by epoch 20 and is bit-identical from epoch 20 to 640. The
+starvation signature is a scale, not proof of immobility.
+
+### 14.6 Detectability, corrected
+
+Across the 30 official-split seeds, 19 of the 28 runs that recover are still at
+chance at epoch 1 — the failure is *not* distinguishable there. Accuracy
+separates the two outcomes from epoch 4, by a usable 8.41 pp at epoch 5.
