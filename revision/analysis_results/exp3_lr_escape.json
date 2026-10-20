@@ -1,0 +1,26 @@
+[
+  {
+    "lr_multiplier": 1,
+    "final_acc": 9.090909090909092,
+    "dead_fc1": 1.0,
+    "logit_std": 0.004351711831986904
+  },
+  {
+    "lr_multiplier": 10,
+    "final_acc": 9.090909090909092,
+    "dead_fc1": 1.0,
+    "logit_std": 0.029734265059232712
+  },
+  {
+    "lr_multiplier": 100,
+    "final_acc": 9.090909090909092,
+    "dead_fc1": 1.0,
+    "logit_std": 0.127726212143898
+  },
+  {
+    "lr_multiplier": 1000,
+    "final_acc": 9.090909090909092,
+    "dead_fc1": 1.0,
+    "logit_std": 0.2346280813217163
+  }
+]

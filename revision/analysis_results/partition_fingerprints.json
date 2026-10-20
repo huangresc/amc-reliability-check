@@ -1,0 +1,34 @@
+{
+  "note": "True fingerprints of the two historical partitions. Maps the legacy, size-only nuisance.data.train_idx_sha1 found in the 185 manifests already on disk to the partition it actually came from. Manifests were NOT rewritten.",
+  "field": "manifest.partition.train_source_sha1",
+  "legacy_field": "manifest.nuisance.data.train_idx_sha1",
+  "legacy_note": "sha1(list(range(n_train))); identifies size only.",
+  "partitions": {
+    "official_stratified_110000_110000": {
+      "legacy_train_idx_sha1": "0ff510c64bc09b86e1a8224246292c9095c75d89",
+      "manifests_affected": 90,
+      "build_partition": {
+        "rule": "official_per_modsnr_half_half",
+        "seed": 42,
+        "n_groups": 220,
+        "n_train": 110000,
+        "n_test": 110000,
+        "train_source_sha1": "59c16df66a074fc50b1b5808078861cebf8f814e",
+        "test_source_sha1": "bca6a0fe35a78d5d14edff1dba1d2b2ecc553752"
+      }
+    },
+    "legacy_resplit_176000_44000": {
+      "legacy_train_idx_sha1": "1b078bc88d4677b5aa16a72093b044a251e0679d",
+      "manifests_affected": 95,
+      "build_partition": {
+        "rule": "legacy_unstratified_re-split_80_20",
+        "seed": 42,
+        "n_groups": 220,
+        "n_train": 176000,
+        "n_test": 44000,
+        "train_source_sha1": "c0d04267d3116e9429a439b3615cc724919e7211",
+        "test_source_sha1": "932676964e2bb3b6c2971f475887377693347fc5"
+      }
+    }
+  }
+}

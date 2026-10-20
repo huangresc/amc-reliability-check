@@ -1,0 +1,12 @@
+[
+  {
+    "reinit_fc1": true,
+    "reinit_fc2": false,
+    "final_acc": 9.090909090909092
+  },
+  {
+    "reinit_fc1": true,
+    "reinit_fc2": true,
+    "final_acc": 9.090909090909092
+  }
+]

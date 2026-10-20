@@ -1,0 +1,40 @@
+{
+  "variant": "M4_FlattenFC",
+  "seed": 42,
+  "epoch": 640,
+  "test_acc": 9.090909090909092,
+  "avg_loss": 2.3979085871956567,
+  "pred_dist": {
+    "8": 110000
+  },
+  "relu_stats": [
+    {
+      "relu_index": 0,
+      "dead_fraction": 0.43750433844548686,
+      "pre_min": -0.33176082372665405,
+      "pre_max": 0.3699057698249817
+    },
+    {
+      "relu_index": 1,
+      "dead_fraction": 0.999643411901262,
+      "pre_min": -0.1556735336780548,
+      "pre_max": 0.025915905833244324
+    },
+    {
+      "relu_index": 2,
+      "dead_fraction": 1.0,
+      "pre_min": -0.04562583565711975,
+      "pre_max": -0.0002531643840484321
+    }
+  ],
+  "grad_norms": {
+    "features.0.weight": 0.0,
+    "features.0.bias": 0.0,
+    "features.3.weight": 0.0,
+    "features.3.bias": 0.0,
+    "classifier.1.weight": 0.0,
+    "classifier.1.bias": 0.0,
+    "classifier.4.weight": 0.0,
+    "classifier.4.bias": 0.9533143043518066
+  }
+}

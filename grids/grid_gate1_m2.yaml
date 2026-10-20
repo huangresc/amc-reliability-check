@@ -1,0 +1,27 @@
+batch_tag: gate1
+variant: M2_GAPHead
+total_epochs: 320
+
+runs:
+  - seed: 42
+    repeat_id: 1
+  - seed: 42
+    repeat_id: 2
+  - seed: 123
+    repeat_id: 1
+  - seed: 456
+    repeat_id: 1
+  - seed: 789
+    repeat_id: 1
+  - seed: 1011
+    repeat_id: 1
+  - seed: 1213
+    repeat_id: 1
+  - seed: 1415
+    repeat_id: 1
+  - seed: 1617
+    repeat_id: 1
+  - seed: 1819
+    repeat_id: 1
+  - seed: 2021
+    repeat_id: 1

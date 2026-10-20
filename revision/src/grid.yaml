@@ -1,0 +1,37 @@
+# Tier 1: 主体
+tier1:
+  M2_GAPHead:
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M4_FlattenFC:
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M5_GAPHead_PhaseAug:
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M5b_GAPHead_PhaseAug4:
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+
+# Tier 2: 归一化维度
+tier2:
+  M2n_g:
+    base_variant: M2_GAPHead
+    normalization: global
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M4n_g:
+    base_variant: M4_FlattenFC
+    normalization: global
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M2n_p:
+    base_variant: M2_GAPHead
+    normalization: per_sample
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
+  M4n_p:
+    base_variant: M4_FlattenFC
+    normalization: per_sample
+    total_epochs: 320
+    seeds: [42, 123, 456, 789, 1011, 1213, 1415, 1617, 1819, 2021]
