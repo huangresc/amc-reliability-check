@@ -14,6 +14,9 @@ during revision. All numbers below match the manuscript.
 | Batch-normalisation ablation | `rc_bn_ablation.py` | `analysis_results/rc_bn_ablation.json` |
 | Residual-connection ablation | `rc_residual_ablation.py` | `analysis_results/rc_residual_ablation.json` |
 | Escape loss-landscape (Hessian) | `rc_escape_landscape.py` | `analysis_results/rc_escape_landscape.json` |
+| Equalised-initialisation ablation | `rc_equalinit_ablation.py` | `analysis_results/rc_equalinit_ablation.json` |
+| Partition-isolation arm (seed-43 re-split) | `rc_partition_isolate.py`, `rc_partition_analyse.py` | `analysis_results/rc_partition_isolate.json` |
+| Thirty-seed architecture contrast (re-split) | `cloud_more_seeds.py`, `rc_more_seeds_analyse.py` | `analysis_results/results_more_seeds.json` |
 | Paper figures 1–3 | `make_budget_figure.py`, `make_repair_figure.py`, `../utils/make_paper_figures.py` | — |
 
 ## Running
